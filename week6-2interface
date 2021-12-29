@@ -1,0 +1,57 @@
+import java.util.*;
+interface students
+{
+void getvalue();
+}
+interface Department
+{
+void getattendense();
+}
+class exam implements students,Department
+{
+int sno,attendense,c;
+String name;
+Scanner s=new Scanner(System.in);
+public void getvalue()
+{
+System.out.println("enter sno:");
+sno=s.nextInt();
+System.out.println("enter name of the student:");
+name=s.next();
+System.out.println("enter class of the student:");
+c =s.nextInt();
+}
+public void getattendense()
+{
+System.out.println("enter sno:");
+sno=s.nextInt();
+System.out.println("enter attendense of the student:");
+attendense=s.nextInt();
+}
+void calattendense()
+{
+System.out.println("the attendense of the student is "+attendense+"%");
+}
+void booleligible()
+{
+if (attendense <80)
+{
+System.out.println("false");
+}
+else
+{
+System.out.println("true");
+}
+}
+}
+class week62
+{
+public static void main(String args[])
+{
+exam o=new exam();
+o.getvalue();
+o.getattendense();
+o.calattendense();
+o.booleligible();
+}
+}
