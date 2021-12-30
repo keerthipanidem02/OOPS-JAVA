@@ -1,68 +1,55 @@
-//Write a java program for the following: Assume that the test results of a batch of students are stored in three different classes. Class student stores the name, roll-number and class test stores the marks obtained in six subjects and class result contains the total marks obtained in the test. The class result can inherit the details of the marks obtained in the test and the name, roll number of students through Multi level inheritance.
 import java.util.*;
-class Student
-{
-Scanner sc=new Scanner(System.in);
-String name;
-int roll_no;
-Student()
-{
-System.out.println("Enter name of the student:");
-name=sc.nextLine();
-System.out.println("Enter roll number of the student:");
-roll_no=sc.nextInt();
-}
-}
-class Test extends Student
+class student
 {
 Scanner s=new Scanner(System.in);
-double marks[]=new double[6];
-int i;
-Test()
+ String name;
+ int id;
+ void read()
 {
-super();
-System.out.println("Enter marks in six subjects:");
+System.out.println("enter name:");
+name=s.next();
+System.out.println("enter id:");
+id=s.nextInt();
+}
+}
+class test extends student
+{ int a[]=new int[6];
+void marks()
+{ super.read();
+int i;
+System.out.println("enter marks");
 for(i=0;i<6;i++)
 {
-System.out.print("Subject"+(i+1)+":");
-marks[i]=s.nextDouble();
+a[i]=s.nextInt();
 }
 }
 }
-class Result extends Test
+class result extends test
 {
-double total=0;
-int i;
-Result()
-{
-super();
+void total()
+{int i,sum=0;
+ super.marks();
+System.out.println("name:"+name);
+System.out.println("id:"+id); 
 for(i=0;i<6;i++)
 {
-total=total+marks[i];
+sum=sum+a[i];
+}
+System.out.println("total marks are:"+sum);
 }
 }
-void display()
-{
-System.out.println("Name: "+name+" , Roll Number : "+roll_no+" , Total Marks : "+total);
-}
-}
-class StudentDemo
+class Week42
 {
 public static void main(String args[])
-{
+{ int n,i;
 Scanner c=new Scanner(System.in);
-System.out.println("Enter number of students:");
-int n=c.nextInt(),i;
-       Result r[]=new Result[n];
+System.out.println("enter no of students");
+n=c.nextInt();
+result s[]=new result[n];
 for(i=0;i<n;i++)
-{
-System.out.println("Student"+(i+1)+":");
-r[i]=new Result();
-}
-for(i=0;i<n;i++)
-{
-System.out.println("Student"+(i+1)+": ");
-r[i].display();
-}
+{System.out.println((i+1)+"student result");
+ s[i]=new result();
+ s[i].total();
+ }
 }
 }
