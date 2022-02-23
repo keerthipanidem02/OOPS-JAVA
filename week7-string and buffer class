@@ -1,0 +1,71 @@
+string class methods:
+
+import java.util.Scanner;
+class WEEK7{
+  public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter string");
+String s1=s.nextLine();
+System.out.println("enter index");
+int i=s.nextInt();
+char c=s1.charAt(i);
+System.out.println("char at given index "+i+" is: "+c);
+System.out.println("length of the given string is: "+s1.length());
+System.out.println("enter begin and end index for substring");
+int b=s.nextInt();
+int e=s.nextInt();
+System.out.println("substring is:"+s1.substring(b,e));
+System.out.println("enter string to concat");
+String s2=s.next();
+System.out.println("after concat:"+s1.concat(s2));
+System.out.println("enter old,new string");
+String o=s.next();
+String n=s.next();
+System.out.println("after replacing: "+s1.replace(o,n));
+System.out.println("to upper case "+s1.toUpperCase());
+System.out.println("enter string for to lowercase");
+String s3=s.next();
+System.out.println("to lower case"+s3.toLowerCase());
+System.out.println("after trim:"+s1.trim());
+}
+}
+
+
+string buffer class methods:
+
+
+Keerthi Panidem
+Thu, 17 Feb, 14:42 (6 days ago)
+to me
+
+import java.util.Scanner;
+import java.lang.StringBuffer;
+public class WEEEK7{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter string");
+String s1=s.nextLine();
+StringBuffer sb=new StringBuffer(s1);
+System.out.println("current capacity: "+sb.capacity());
+System.out.println("enter string to append and insert");
+String s2=s.nextLine();
+StringBuffer sb1=new StringBuffer(s2);
+System.out.println("after appending"+sb.append(sb1));
+System.out.println("enter first and last index to delete");
+int f=s.nextInt();
+int e=s.nextInt();
+System.out.println("after deleting string "+sb.delete(f,e));
+System.out.println("after inserting string "+sb1+" string is : "+sb.insert(2,sb1));
+System.out.println("after reversing :"+sb.reverse());
+/*int f1=s.nextInt();
+int e1=s.nextInt();
+System.out.println("enter string and replacing string");
+String ss=s.nextLine();
+String sr=s.nextLine();
+StringBuffer sb2=new StringBuffer(ss);
+StringBuffer sb3=new StringBuffer(sr);
+*/
+sb.replace(1,4,"ratun");
+System.out.println("after replacing "+sb);
+}
+}
