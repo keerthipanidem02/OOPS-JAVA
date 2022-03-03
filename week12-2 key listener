@@ -1,0 +1,39 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+public class KeyTest extends Applet implements KeyListener
+{
+public void init()
+{
+Label l=new Label("enter character");
+add(l);
+TextField tf=new TextField(10);
+tf.addKeyListener(this);
+add(tf);
+}
+public void keyPressed(KeyEvent e)
+{
+
+}
+public void keyReleased(KeyEvent e)
+{
+
+}
+public void keyTyped(KeyEvent e)
+{
+showStatus("recently"+e.getKeyChar());
+}
+}
+<html>
+<head>
+<title>
+KeyListener
+</title>
+</head>
+<body>
+<applet code="KeyTest.class"
+width="100"
+height="100">
+</applet>
+</body>
+</html>
