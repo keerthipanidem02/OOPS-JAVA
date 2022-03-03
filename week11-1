@@ -1,0 +1,32 @@
+import java.awt.*;
+import java.applet.Applet;
+import java.awt.Graphics;
+public class ParamPass extends Applet
+{
+String n;
+String n1;
+String n2;
+String n3;
+public void init()
+{
+n=getParameter("n Parameter");
+n1=getParameter("n1 Parameter");
+n2=getParameter("n2 Parameter");
+n3=getParameter("n3 Parameter");
+}
+public void paint(Graphics g)
+{
+g.drawString(n,300,200);
+g.drawString(n1,300,300);
+g.drawString(n2,300,400);
+g.drawString(n3,300,500);
+}
+}
+
+
+<applet code="ParamPass.class" width="600" height="600">
+<param name="n Parameter" value="keerthi">
+<param name="n1 Parameter" value="bantu">
+<param name="n2 Parameter" value="puji">
+<param name="n3 Parameter" value="nithu">
+</applet>
