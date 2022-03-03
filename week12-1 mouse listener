@@ -38,5 +38,18 @@ showStatus("mouse moved at"+e.getX()+","+e.getY());
 }
 }
 
+<html>
+<head>
+<title>
+Mouse Listener
+</title>
+</head>
+<body>
+<applet code="MouseTest.class"
+width="100"
+height="100">
+</applet>
+</body>
+</html>
 
 
